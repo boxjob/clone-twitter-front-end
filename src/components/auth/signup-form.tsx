@@ -6,8 +6,9 @@ import { InputCustom } from "../ui/inputCustom"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import { ButtonCustom } from "../ui/buttonCustom"
 
-export const SigninForm = () => {
+export const SignUpForm = () => {
     const router = useRouter()
+    const [ nameField, setNameField ] = useState('')
     const [ emailField, setEmailField ] = useState('')
     const [ passwordField, setPasswordField ] = useState('')
 
@@ -18,10 +19,15 @@ export const SigninForm = () => {
   return (
     <>
         <InputCustom 
+            placeholder="Digite seu nome"
+            value={ nameField }
+            onChange={ t => setNameField( t )} 
+        />
+
+        <InputCustom 
             placeholder="Digite seu e-mail"
             value={ emailField }
             onChange={ t => setEmailField( t )} 
-            icon={faHeart}
         />
 
         <InputCustom 
