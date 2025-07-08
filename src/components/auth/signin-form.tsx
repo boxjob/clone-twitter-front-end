@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { InputCustom } from "../ui/inputCustom"
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
 export const SigninForm = () => {
     const router = useRouter()
@@ -14,17 +16,18 @@ export const SigninForm = () => {
 
   return (
     <>
-        <input 
-            placeholder='digite seu e-mail' 
+        <InputCustom 
+            placeholder="Digite seu e-mail"
             value={ emailField }
-            onChange={ e => setEmailField( e.target.value )}
+            onChange={ t => setEmailField( t )} 
+            icon={faHeart}
         />
 
-        <input 
-            type="password"
-            placeholder='digite sua senha' 
+        <InputCustom 
+            placeholder='Digite sua senha' 
             value={ passwordField }
-            onChange={ e => setPasswordField( e.target.value )}
+            onChange={ t => setPasswordField( t )}
+            password
         />
 
         <button
