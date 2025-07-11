@@ -1,3 +1,4 @@
+import { ProfileFeed } from '@/components/profile/profile-feed'
 import { ButtonCustom } from '@/components/ui/buttonCustom'
 import { GeneralHeader } from '@/components/ui/general-header'
 import { user } from '@/data/user'
@@ -19,7 +20,7 @@ export default function Page() {
                     className='bg-gray-500 h-28 bg-no-repeat bg-cover bg-center'
                     style={{ backgroundImage: 'url('+ user.cover +')'}}
                 />
-                <div className='-mt-12 flex justify-between items-end'>
+                <div className='-mt-12 flex justify-between items-end px-6'>
                     <img src={ user.avatar } alt={ user.name } className='size-24 rounded-full' />
                     <div className='w-32'>
                         { isMe 
@@ -55,6 +56,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+            <ProfileFeed/>
         </div>
     )
 }
