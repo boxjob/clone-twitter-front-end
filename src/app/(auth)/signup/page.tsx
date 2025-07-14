@@ -1,4 +1,3 @@
-import { SigninForm } from '@/components/auth/signin-form'
 import { SignUpForm } from '@/components/auth/signup-form'
 import { Logo } from '@/components/ui/logo'
 import Link from 'next/link'
