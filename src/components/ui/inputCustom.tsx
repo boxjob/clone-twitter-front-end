@@ -33,7 +33,7 @@ export const InputCustom = ({ placeholder, value, onChange, onEnter, password, f
                 type={ password && !showPassword ? 'password' : 'text'}
                 className='flex-1 outline-none bg-transparent h-full px-4'
                 placeholder={ placeholder }
-                value={ value }
+                defaultValue={ value }
                 onChange={ e => onChange && onChange( e.target.value ) }
                 onKeyUp={ handleKeyUp }
             />
